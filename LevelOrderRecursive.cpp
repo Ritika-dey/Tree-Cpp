@@ -44,6 +44,7 @@ void leveOrder(node *root){
   for(int i=1;i<=height(root);i++)
   {
       printLevel(root , i);
+      cout<<endl;
   }
 }
 
