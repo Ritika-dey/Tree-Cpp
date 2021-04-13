@@ -39,7 +39,7 @@ void currLevel(node* root , map<int , vector<int>>& m ,int hd){
 
 void verticalView(node *root){
     map<int , vector<int>> m;
-    int hd = 0;
+    int hd = 0 ; //horizontal distance
 
     currLevel(root , m , hd);
 //    print 
