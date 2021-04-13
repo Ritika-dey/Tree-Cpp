@@ -28,17 +28,21 @@ void levelOrder(node *root){
     q.push(root);
 
     while(!q.empty()){
+       int size = q.size();
+       while(size--){
         node *curr = q.front();
         cout<<curr->val<<" ";
         q.pop();
         if(curr->left) q.push(curr->left);
         if(curr->right) q.push(curr->right);
+       }
+       cout<<endl;
     }
 }
 
 int main() {
     node *root = build();
 
-    cout<<"Level order traversal : ";
+    cout<<"Level order traversal : "<<endl;
     levelOrder(root);
 }
