@@ -15,10 +15,8 @@ class node{
 int preIndex = 0, posIndex = 0;
 node* constructTree(int pre[], int post[]) {
     node* root = new node(pre[preIndex++]);
-    if(root->val != post[posIndex]) {
-        root->left = constructTree(pre,post); 
-        root->right = constructTree(pre,post);
-    }
+    if(root->val != post[posIndex])  root->left = constructTree(pre,post); 
+    if(root->val != post[posIndex])  root->right = constructTree(pre,post);
     posIndex++;
     return root;
 }
